@@ -14,8 +14,8 @@ function App() {
       <Suspense fallback={<div>Please wait</div>}>
         <BrowserRouter>
           <Routes>
-            <Route path='/slides' element={ <Home />} />
-            <Route path='/slides/slide' element={ <Slides />} />
+            <Route path='slides' element={ <Home />} />
+            <Route path='slides/slide' element={ <Slides />} />
           </Routes>
         </BrowserRouter>
       </Suspense>
