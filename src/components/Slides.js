@@ -35,7 +35,7 @@ const Slides = () => {
             }, 20);        
             return () => clearInterval(interval1);
         }
-        if(count==2){
+        else if(count==2){
             const interval2 = setInterval(()=>{
                 setImg("images/Int03/")
                 setShow(false);
@@ -48,7 +48,7 @@ const Slides = () => {
             }, 20);        
             return () => clearInterval(interval2);
         }
-        if(count==3){
+        else if(count==3){
             const interval3 = setInterval(()=>{
                 setImg("images/Non_Int_png/")
                 setShow(false);
@@ -56,10 +56,22 @@ const Slides = () => {
                 if(a == 249){
                     a = 0;
                     clearInterval(interval3)
-                    // setShow(true);
+                    setShow(true);
+                    count=0
                 }
             }, 20);        
             return () => clearInterval(interval3);
+        }
+        else{
+            const interval = setInterval(()=>{
+                setA(a += 1)
+                if(a == 175){
+                    a = 0;
+                    // clearInterval(interval)
+                    setShow(true);
+                }
+            }, 20);        
+            return () => clearInterval(interval);
         }
     }
 
