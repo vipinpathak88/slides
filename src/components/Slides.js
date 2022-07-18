@@ -79,7 +79,7 @@ const Slides = () => {
 
     return (
         <div className="slider">
-            <img src={`${img}${a}.png`} alt="emoji" />
+            <img src={`${img}${a}.png`} alt="emoji" width="480" />
             {show?<button type="submit" className="n_btn" onClick={next}>
                 Next {count}
                 <span id="result"></span>
