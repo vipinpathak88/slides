@@ -11,7 +11,7 @@ const Slides = () => {
             setA(a += 1)
             if(a == 175){
                 a = 0;
-                clearInterval(interval)
+                // clearInterval(interval)
                 setShow(true);
             }
         }, 20);        
