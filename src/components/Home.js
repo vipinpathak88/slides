@@ -11,7 +11,7 @@ const Home = () => {
                     <input className="input" type="text" placeholder="Enter Email" />
                     <input className="input" type="text" placeholder="Enter Phone" />
                     <textarea className="textarea" placeholder="Message" maxlength="3000" rows="5"></textarea>
-                    <NavLink to="/slides" className="btn">Login</NavLink>
+                    <NavLink to="/slide" className="btn">Login</NavLink>
                 </form>
             </div>
         </div>
