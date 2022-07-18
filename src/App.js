@@ -1,18 +1,23 @@
 // import logo from './logo.svg';
+import React, { Suspense, lazy} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home';
+// import Home from './components/Home';
 import Slides from './components/Slides';
+
+const Home = lazy(()=>import('./components/Home'))
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/slides' element={ <Home />} />
-          <Route path='/slides/slide' element={ <Slides />} />
-        </Routes>
-      </BrowserRouter>
+      <Suspense fallback={<div>Please wait</div>}>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/slides' element={ <Home />} />
+            <Route path='/slides/slide' element={ <Slides />} />
+          </Routes>
+        </BrowserRouter>
+      </Suspense>
     </>
   );
 }
