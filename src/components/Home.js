@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div className="container">
             <div className="form">
-                <form>
+                <form action="">
                     <h1>Submit Login Form</h1>
                     <input className="input" type="text" placeholder="Enter Name" />
                     <input className="input" type="text" placeholder="Enter Email" />
