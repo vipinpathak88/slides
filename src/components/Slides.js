@@ -8,10 +8,11 @@ const Slides = () => {
     
     useEffect(() => {        
         const interval = setInterval(()=>{
+            setImg("images/Int01/")
             setA(a += 1)
             if(a == 175){
                 a = 0;
-                // clearInterval(interval)
+                clearInterval(interval)
                 setShow(true);
             }
         }, 20);        
@@ -57,17 +58,18 @@ const Slides = () => {
                     a = 0;
                     clearInterval(interval3)
                     setShow(true);
-                    count=0
                 }
             }, 20);        
             return () => clearInterval(interval3);
         }
-        else{
+        else if(count==4){
             const interval = setInterval(()=>{
+                setImg("images/Int01/")
                 setA(a += 1)
+                setCount(count=1)
                 if(a == 175){
                     a = 0;
-                    // clearInterval(interval)
+                    clearInterval(interval)
                     setShow(true);
                 }
             }, 20);        
